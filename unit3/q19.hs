@@ -104,6 +104,8 @@ emptyDrawers :: [Maybe Organ] -> Int
 emptyDrawers []        = 0
 emptyDrawers organList = (length . filter isNothing) organList
 
+-- Q19.2
+-- Write a version of map that works for Maybe types, called maybeMap.
 maybeMap :: (a -> b) -> Maybe a -> Maybe b
 maybeMap _ Nothing        = Nothing
 maybeMap mapFunc (Just a) = Just (mapFunc a)
